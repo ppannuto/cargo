@@ -261,10 +261,10 @@ impl<'de> de::Deserialize<'de> for TomlOptLevel {
             fn visit_str<E>(self, value: &str) -> Result<TomlOptLevel, E>
                 where E: de::Error
             {
-                if value == "s" || value == "z" {
+                if value == "g" || value == "s" || value == "z" {
                     Ok(TomlOptLevel(value.to_string()))
                 } else {
-                    Err(E::custom(format!("must be an integer, `z`, or `s`, \
+                    Err(E::custom(format!("must be an integer, `g`, `s`, or `z`, \
                                            but found: {}", value)))
                 }
             }

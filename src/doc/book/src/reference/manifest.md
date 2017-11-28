@@ -276,7 +276,7 @@ along with the defaults for each profile.
 # The development profile, used for `cargo build`.
 [profile.dev]
 opt-level = 0      # controls the `--opt-level` the compiler builds with.
-                   # 0-1 is good for debugging. 2 is well-optimized. Max is 3.
+                   # g is best for debugging. 2 is well-optimized. Max is 3.
 debug = true       # include debug information (debug symbols). Equivalent to
                    # `-C debuginfo=2` compiler flag.
 rpath = false      # controls whether compiler should set loader paths.
